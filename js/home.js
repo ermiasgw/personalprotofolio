@@ -1,129 +1,129 @@
-function nextmove2(margin,i){
-    const elem = document.getElementById("snake3");
-    const elem2 = document.getElementById("snake2");
-    const elem3 = document.getElementById("snake4");
-    elem3.style.visibility= "visible";
-    let j=1;
-    let k=1;
-    let id=null;
-    let pos=0;
-    id = setInterval(frame, 10);
-    function frame() {
-        if (pos == 301) {
-            clearInterval(id);
-        }
-        else {
-            margin++;
-            i++;
-            if(elem2.style.width != "0px"){
-                elem2.style.marginLeft = margin + 'px';
-                elem2.style.width = 400-i + 'px';
-            
-            }
-            else{
-                elem.style.marginTop = 75 +j + 'px';
-                elem.style.height= 300-j + 'px';
-                j++;
-                
-            }
-        
-        
-            pos++;
-            elem3.style.marginLeft = 696-pos + 'px';
-            elem3.style.width = 10+k + 'px';
-            k++;
-
-      }
+  function menu(){
+    var elem=document.getElementById("menu");
+    if(elem.className === "navb"){
+      elem.className += "responsive";
+      elem.style.top="0";
     }
-  }
-
-
-function nextmove(margin){
-    const elem = document.getElementById("snake3");
-    const elem2 = document.getElementById("snake2");
-    elem.style.visibility= "visible";
-    let i=1;
-    let j=1;
-    let id=null;
-    let pos = 0;
-    id = setInterval(frame, 10);
-    function frame() {
-        margin++;
-        i++;
-        if(elem2.style.width != "0px"){
-            elem2.style.marginLeft = margin + 'px';
-            elem2.style.width = 400-i + 'px';
-        
-        }
-        else{
-            elem.style.marginTop = 75 +j + 'px';
-                elem.style.height= 300-j + 'px';
-                j++;
-        }
-      if (pos == 300) {
-        clearInterval(id);
-        nextmove2(margin,i);
-      } 
-      else {
-        
-        pos++;
-        elem.style.height = pos + 'px';
-      }
-    }
-  }
-function myMove() {
-    let i=1;
-    let id = null;
-    const elem = document.getElementById("snake2");
-    let pos = 0;
-    let margin=0;
-    clearInterval(id);
-    id = setInterval(frame, 10);
-    function frame() {
-      if (pos == 710) {
-        
-        clearInterval(id);
-        nextmove(margin);
-      } else {
-        if(pos>= 400){ 
-            pos++;
-            margin++;
-            elem.style.marginLeft = margin + 'px';
-        }
-        else{
-            pos++;
-            elem.style.width = pos + 'px';
-        }
-        
-      }
+    else{
+      elem.className = "navb";
+      elem.style.top="-50%";
     }
   }
   
-  function textanim(){
-    const elem = document.getElementById("pros");
-    let id=null;
-    let pos=0;
-    let i=0;
-    let j=0;
-    elem.style.visibility="visible";
-    id = setInterval(frame, 20);
-    function frame() {
-      if(pos>=40){
-        if(i==0)
-        {
-          elem.style.transform="rotate("+j+"deg)";
-          j++;
-          if(j==15){i=1;}   
+  function textanim2(){
+    var elem1=document.getElementById("pros");
+    var elem2=document.getElementById("pros1");
+    elem2.style.visibility="hidden";
+    elem2.style.animationName="none";
+    elem1.style.visibility="visible";
+    elem1.style.animation="anim1 6s linear";
+    elem1.onanimationend=textanim3;
+    }
+    function textanim3(){
+      var elem2=document.getElementById("pros");
+      var elem1=document.getElementById("pros1");
+      elem2.style.animationName="none";
+      elem2.style.visibility="hidden";
+      elem1.style.visibility="visible";
+      elem1.style.animation="anim2 5s linear";
+      elem1.onanimationend=textanim4;
+      }
+
+      function textanim4(){
+        var elem2=document.getElementById("pros1");
+        var elem1=document.getElementById("pros2");
+        elem2.style.animationName="none";
+        elem2.style.visibility="hidden";
+        elem1.style.visibility="visible";
+        elem1.style.animation="anim3 4s linear";
+        elem1.onanimationend=textanim2;
         }
+
+        function textanim4(){
+          var elem2=document.getElementById("pros2");
+          var elem1=document.getElementById("pros3");
+          elem2.style.animationName="none";
+          elem2.style.visibility="hidden";
+          elem1.style.visibility="visible";
+          elem1.style.animation="anim4 4s linear";
+          elem1.onanimationend=textanim2;
+          }
+
+
+  function percentt(){
+    var elem1=document.querySelectorAll(".childs3");
+    var elem2=document.querySelectorAll(".childs1");
+    var elem3=document.querySelectorAll(".childs2");
+    var elem4 = document.querySelectorAll(".childs");
+    let id=null;
+    let radius=0;
+    clearInterval(id);
+    id = setInterval(frame, 6);
+    function frame() {
+      if(radius<=-129){
         clearInterval(id);
+        percent2(radius);
       }
       else{
-        pos++;
-        elem.style.fontSize = pos+ "px";
+        radius--;
+        for(i=0;i<=elem1.length;i++){
+          elem1[i].style.transform="rotate("+radius+"deg)";
+          elem2[i].style.transform="rotate("+radius+"deg)";
+          elem3[i].style.transform="rotate("+radius+"deg)";
+          elem4[i].style.transform="rotate("+radius+"deg)";
+        }
       }
     }
-
-
+    
   }
-  textanim();
-  myMove();
+  function percent2(radius){
+    var elem1=document.querySelectorAll(".childs3");
+    var elem2=document.querySelectorAll(".childs1");
+    var elem3=document.querySelectorAll(".childs2");
+    var elem=document.querySelectorAll(".circle");
+    for(i=0;i<elem.length;i++){
+      elem[i].style.visibility="hidden";
+    }
+    id = setInterval(frame, 3);
+    function frame() {
+      if(radius<=-215){
+        if(radius<=-304){
+          if(radius<=-380){
+            for(i=0;i<elem.length;i++){
+              document.getElementsByClassName("percent")[i].style.visibility="visible";
+            }
+            clearInterval(id);  
+          }
+          else{
+            radius--;
+            for(i=0;i<elem.length;i++){
+              elem1[i].style.transform="rotate("+radius+"deg)";
+                
+            }
+          }
+          
+        }
+        else{
+          radius--;
+          for(i=0;i<elem.length;i++){
+            elem1[i].style.transform="rotate("+radius+"deg)";
+            elem2[i].style.transform="rotate("+radius+"deg)";
+          }
+        }
+      }
+      else{
+        radius--;
+        for(i=0;i<elem.length;i++){
+          elem1[i].style.transform="rotate("+radius+"deg)";
+          elem2[i].style.transform="rotate("+radius+"deg)";
+          elem3[i].style.transform="rotate("+radius+"deg)";
+            
+        }
+      
+      }
+    }
+    
+  }
+  
+  textanim2();
+  percentt();
