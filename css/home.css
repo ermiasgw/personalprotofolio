@@ -4,6 +4,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
 }
+
 #menu{
     z-index: 30;
     top: -50%;
@@ -31,6 +32,7 @@ header{
     min-height: 40px;
     background-color: black;
     width: 100%;
+    min-width: 330px;
     z-index: 100;
 }
 .logo{
@@ -88,35 +90,24 @@ nav{
 section{
     padding-top: 40px;
     width: 100%;
+    min-width: 330px;
 }
 .home{
     
     width:100%;
+    min-width: 330px;
     height: 70vh;
-    display: flex;
-    flex-direction: column;
     position: relative;
     margin-bottom: 0px;
-
+    background-image: url("6.jpg");
 }
 .left{
     width:100%;
-    height: 70%;
-    order: 2;
+    height: 100%;
     position: relative;
-    background-color: black;
     display: flex; 
     flex-direction: column;
-    align-items: center;
    
-}
-.right{
-    height: 30%;
-    width:100%;
-    order: 1;
-    position: relative;
-    background-color: black;   
-    overflow: hidden;
 }
 
 .container{
@@ -132,91 +123,34 @@ section{
     width: 10vw;
     height: 10vw;
     align-self:flex-end;
-    background-color: rgb(53, 47, 47);
-    border: 1px rgb(53, 47, 47) solid;
+    background-color: rgba(25, 15, 63, 0.753);
+    border: 1px rgba(25, 15, 63, 0.753) solid;
     border-top-right-radius: 5rem;
 }
 .tab2{
     width: 10vw;
     height: 10vw;
     align-self:flex-end;
-    background-color: rgb(53, 47, 47);
-    border: 1px rgb(53, 47, 47) solid;
+    background-color: rgba(25, 15, 63, 0.753);
+    border: 1px rgba(25, 15, 63, 0.753) solid;
     border-top-left-radius: 5rem;
     
 }
 
-.snake > div{
-    width: 15px;
-    height: 15px;
-    top: 10%;
-    left: -20%;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    animation: snake2 5s linear;
-}
 
-
-.snake > div:nth-child(2){
-    animation-delay: 1s;
-}
-.snake > div:nth-child(3){
-    animation-delay: 0.8s;
-}
-.snake > div:nth-child(4){
-    animation-delay: 0.6s;
-}
-.snake > div:nth-child(5){
-    animation-delay: 0.4s;
-}
-.snake > div:nth-child(6){
-    animation-delay: 0.2s;
-}
-.snake > div:nth-child(7){
-    animation-delay: 1.2s;
-}
-.snake > div:nth-child(8){
-    animation-delay: 1.4s;
-}
-.snake > div:nth-child(9){
-    animation-delay: 1.6s;
-}
-
-
-@keyframes snake2{
-    0%{
-        left:-20%;
-        top: 10%;
-    }
-    40%{
-        top: 10%;
-        left: 80%;
-    }
-    80%{
-        left: 80%;
-        top: 50%;
-    }
-    100%{
-        top: 50%;
-        left: 20%;
-    }
-
-}
 
 .label2{
     color: white;
-    margin-top: 15vh;
-    margin-bottom: 10px;
+    margin-top: 20vh;
     font-size: 9vw;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .hire{
-    color: rgb(207, 152, 50);
+    color: rgb(177, 90, 155);
     text-decoration: unset;
     font-size: 4vw;
     justify-self: center;
-    background: rgb(3, 36, 18);
+    background: rgb(3, 29, 36);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 15px;
@@ -226,104 +160,6 @@ section{
     
 }
 
-#pros{
-    color: white;
-    left: 100%;
-    top: 30%;
-    font-size: 5vw;
-    position: absolute;
-    z-index: 1;
-}
-
-@keyframes anim1{
-    0%{
-        left: 100%;
-    }
-    50%{
-        left: 10%;
-    }
-
-}
-#pros1{
-    color: white;
-    top: -40%;
-    left: 40%;
-    font-size: 5vw;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    z-index: 1;
-    position: absolute;   
-}
-@keyframes anim2{
-    0%{
-        top: -40%;
-    }
-    50%{
-        top: 70%;
-    }
-}
-#pros2{
-    color: rgb(155, 148, 148);
-    top: 30%;
-    left: -50%;
-    font-size: 5vw;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    z-index: 1;
-    position: absolute;
-}
-@keyframes anim3{
-    0%{
-        left: -50%;
-    }
-    50%{
-        left: 60%;
-    }
-}
-
-
-#pros3{
-    color: rgb(250, 216, 216);
-    top: 30%;
-    left: 100%;
-    font-size: 5vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    z-index: 1;
-    position: absolute;
-}
-@keyframes anim4{
-    0%{
-        left: 100%;
-        transform: rotate(0deg);
-    }
-    20%{
-        left: 80%;
-        transform: rotate(360deg);
-    }
-    40%{
-        left: 60%;
-        transform: rotate(0deg);
-    }
-    60%{
-        left: 40%;
-        transform: rotate(360deg);
-    }
-    80%{
-        left: 20%;
-        transform: rotate(0deg);
-    }
-    100%{
-        left: 0%;
-        transform: rotate(360deg);
-    }
-}
-
-#pros4{
-    visibility: hidden;
-    position: absolute;
-}
-#pros5{
-    visibility: hidden;
-    position: absolute;
-}
 
 
 .about{
@@ -331,22 +167,27 @@ section{
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: rgb(189, 159, 159);
+    background: rgb(25, 4, 58);
     padding-top: 0px;
+    overflow: hidden;
 }
 .container2{
     position: absolute;
     width: 20vw;
     left: 10%;
-    background-color: rgb(53, 47, 47);
+    background-color: rgba(25, 15, 63, 0.753);
     border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    
+    border-bottom-right-radius: 2rem;   
 }
+.inner{
+    color:rgb(234, 217, 250); 
+    font-size: 3vw;
+}
+
+
 
 .left2{
     width: 100%;
-    background-color: red;
     
 }
 .right2{
@@ -364,23 +205,24 @@ section{
     border-radius: 90px;
 }
 .quote{
-    height: fit-content;
+    color: silver;
     font-size: 3vw;
 
 }
 .blog{
-
+    color: blanchedalmond;
+    font-size:larger;
     padding-left: 15%;
     padding-right: 15%;
 
 }
 
 .skill{
-    border-left:5px black solid;
+    border-left:5px green solid;
     padding-left: 7px;
     padding-top: 3px;
     margin-left: 6vw;
-    
+    color: white;
 }
 
 .up1 , .up2 , .up3{
@@ -402,10 +244,10 @@ section{
     width: 50%;
     height: 100%;
     position: absolute;
-    background-color: white;
+    background-color: rgb(25, 4, 58);
     visibility: visible;
     left:50%;
-    z-index: 4;      
+    z-index: 5;      
 }
 
 .circle1{
@@ -427,12 +269,12 @@ section{
     border: 8px solid ;
     border-radius: 50%;
 
-    border-color: transparent red transparent transparent;
+    border-color: transparent green transparent transparent;
 }
 
 
 .percent{
-    color: rgb(29, 26, 22);
+    color: white;
     float: right;
     margin-top: 5%;
     margin-right: 3%;
@@ -447,62 +289,89 @@ section{
 }
 
 .products{
-    background-color: green;
+    
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .bottom{
     display: flex;
+    width: 100%;
+    height: 100%;
     padding-top: 90px;
     padding-bottom: 12vw;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: hotpink;
+    background: linear-gradient(rgb(25, 4, 58),black);
+
  }
 
-.img1{
+#img1 , #img2 , #img3 , #img4 , #img5, #img6{
     width: 30vw;
     min-width: 200px;
     height: 20vw;
-    background-color: rgb(138, 53, 53);
     display:flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     position: relative;
     margin-bottom: 30px;
+    background: linear-gradient(rgba(1, 0, 36, 0.616),black);
 }
-.img1 > h4{
+#img1> h4, #img2 >h4 ,#img3>h4 ,#img4>h4,#img5>h4,#img6>h4{
     
-    display: flex;
-    align-content: center;
+    
     font-size: larger;
     color: white;
     z-index: 2;
 }
 
+#front{
+    width: 100%;
+    min-width: 330px;
+    height: 100%;
+    position:absolute;
+    background-color: rgb(65, 59, 11);
+    opacity: 0.6;
+    visibility: hidden;
+    z-index: 20;
+}
+
+#imagee,#imagee2,#imagee3,#imagee4,#imagee5,#imagee6{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    visibility: hidden;
+    transition: transform 0.5s;
+
+    z-index: 20;
+}
+.hide{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 30;
+    position: absolute;
+}
+
 
 
 .row1,.row3,.row4{
-    width: 30vw;
-    min-width: 200px;
-    height: 20vw;
-    min-height: 300px;
+    width: 95%;
+    height: 100%;
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 .row2,.row5,.row6{
-    width: 30vw;
-    min-width: 200px;
-    height: 20vw;
+    width: 95%;
+    height: 100%;
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    background-color: black;
 }
 
 .row1>div,.row2>div,.row3>div,.row4>div ,.row5>div,.row6>div{
@@ -534,23 +403,25 @@ section{
 }
 .row6 > div{
     background-color: white;
-    animation-delay: 5s;
+    animation-delay: 3.5s;
 }
 
 
 
 footer{
     position: relative;
-    display: flex;   
+    display: flex;  
+    background-color:black; 
+    min-width: 330px;
 }
 .bet{
     width: 100%;
     margin:0;
-    padding-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;  
+    flex-direction: column; 
+    
 }
 .begin > h2{
     font: bold;
@@ -564,6 +435,7 @@ footer{
 }
 .phone,.email{
     display: flex;
+    color: white;
     
 }
 .phone > label,.email>label{
@@ -577,7 +449,22 @@ footer{
     float: left;
 }
 .social{
-    padding-bottom:20px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+.social>a{
+    text-decoration: none;
+    color: white;
+}
+.telegram{
+    display: flex;
+    flex-direction: row;
+}
+.telegram>img{
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding-right: 3px;
 }
 
 
@@ -612,7 +499,10 @@ footer{
     }
     .container2{
         width:16vw;
-        left: 10%;
+        left: 8%;
+    }
+    .inner{
+        font-size:1.5vw;
     }
 
     .contact{
@@ -637,9 +527,12 @@ footer{
     #menu , #menu>a{
         visibility: hidden;
     }
+    nav{
+        width: 45%;
+    }
     .bar{
         visibility: visible;
-        padding-right: 10px ;
+        padding-right: 20px ;
     }
     .menu-icon{
         visibility: hidden;
@@ -648,18 +541,7 @@ footer{
         padding-top: 5vw;   
     }
     .home{
-        flex-direction: row;
         height: 85vh;
-    }
-    .left, .right{
-        width: 50%;
-        height: 100%;
-    }
-    .left{
-        order: 1;
-    }
-    .right{
-        order: 2;
     }
 
     .label2{
@@ -688,7 +570,7 @@ footer{
     }
     .about{
         flex-direction: row;
-        height: 90vh;
+        height: 110vh;
     }
     .left2{
         width: 50%;
@@ -698,7 +580,7 @@ footer{
     .right2{
         width:50%;
         height: 100%;
-        padding-top: 3vw;
+        padding-top: 8vw;
     }
 
 
@@ -708,6 +590,9 @@ footer{
 
 
 @media only screen and (min-width: 1200px) {
+    nav{
+        width: 35%;
+    }
 
 }
 
